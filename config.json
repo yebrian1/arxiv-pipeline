@@ -1,12 +1,12 @@
 {
   "ranking_weights": {
-    "relevance": 0.40,
-    "impact_score": 0.30,
-    "citation_velocity": 0.20,
-    "recency": 0.10
+    "relevance": 0.4,
+    "impact_score": 0.3,
+    "citation_velocity": 0.2,
+    "recency": 0.1
   },
-  "tier2_promotion_threshold": 0.30,
-  "horizon_paper_score_gate": 0.50,
+  "tier2_promotion_threshold": 0.3,
+  "horizon_paper_score_gate": 0.5,
   "revisit_thresholds": {
     "new_citations_delta": 10,
     "citing_papers_in_batch": 2
@@ -16,5 +16,6 @@
   "llm_candidates_per_slot": 5,
   "tier1_rolling_window_days": 180,
   "arxiv_lookback_days": 30,
-  "gemini_model": "gemini-3.1-pro-preview"
+  "gemini_model": "gemini-3.1-pro-preview",
+  "github_pages_base": "https://yebrian1.github.io/arxiv-pipeline"
 }
