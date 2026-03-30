@@ -8,6 +8,12 @@
     ],
     "https://arxiv.org/abs/2603.17851": [
       "2026-03-30-slot1-briefing"
+    ],
+    "10.3390/s26072081": [
+      "2026-03-30-slot2-briefing"
+    ],
+    "https://arxiv.org/abs/2603.14393": [
+      "2026-03-30-slot2-briefing"
     ]
   },
   "article_to_papers": {
@@ -15,6 +21,10 @@
       "https://arxiv.org/abs/2603.22876",
       "https://arxiv.org/abs/2603.19201",
       "https://arxiv.org/abs/2603.17851"
+    ],
+    "2026-03-30-slot2-briefing": [
+      "10.3390/s26072081",
+      "https://arxiv.org/abs/2603.14393"
     ]
   }
 }
