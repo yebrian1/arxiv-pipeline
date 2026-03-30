@@ -1,1 +1,175 @@
-[]
+[
+  {
+    "day_index": 2,
+    "topic_slot": "Robotic Ultrasound",
+    "title": "Autonomous Robotic Ultrasound: From Path Planning to LLM-Driven Agents",
+    "is_revisit": false,
+    "markdown_content": "## Autonomous Robotic Ultrasound: From Path Planning to LLM-Driven Agents\n\nThe transition of robotic ultrasound from teleoperation to full autonomy requires solving coupled challenges in force control, real-time image interpretation, and dynamic path planning. In [A Review and Perspective of Techniques for Autonomous Robotic Ultrasound Acquisitions](https://doi.org/10.3390/s26072081), Qin et al. provide a comprehensive map of the current state-of-the-art. The review breaks down the autonomous workflow into perception, decision-making, and execution stages. A primary deployment bottleneck identified is the integration of **force sensitivity** with dynamic **scanning path-planning**. Unlike rigid object manipulation, ultrasound requires maintaining continuous, specific contact forces against deformable human tissue while adjusting the probe angle to optimize acoustic windows. The paper highlights that while individual sub-systems (like force-controlled execution) have matured, end-to-end decision-making frameworks that can adapt to patient-specific anatomies remain fragile.\n\nAddressing this exact decision-making bottleneck, Bi et al. propose a radical shift in control architecture in [From Scanning Guidelines to Action: A Robotic Ultrasound Agent with LLM-Based Reasoning](https://arxiv.org/abs/2603.14393). Rather than relying on rigid, pre-programmed state machines, the authors deploy a **Large Language Model (LLM)-based agent** capable of interpreting clinical scanning guidelines. The LLM dynamically invokes software tools for both perception (e.g., semantic segmentation of the ultrasound feed) and control (e.g., probe orientation adjustments). This enables variable, decision-dependent workflows—allowing the robot to alter its scanning strategy on the fly if an acoustic shadow obscures a target organ, mirroring the adaptive reasoning of a human sonographer.\n\n**Key takeaway:** The bottleneck in robotic ultrasound is shifting from low-level force control and path execution to dynamic, agentic reasoning that can interpret clinical guidelines and adapt to variable patient anatomies on the fly.",
+    "papers": [
+      {
+        "role": "lead",
+        "title": "A Review and Perspective of Techniques for Autonomous Robotic Ultrasound Acquisitions",
+        "url": "https://doi.org/10.3390/s26072081",
+        "is_high_impact": false,
+        "cites_high_impact_id": null
+      },
+      {
+        "role": "supporting",
+        "title": "From Scanning Guidelines to Action: A Robotic Ultrasound Agent with LLM-Based Reasoning",
+        "url": "https://arxiv.org/abs/2603.14393",
+        "is_high_impact": false,
+        "cites_high_impact_id": null
+      }
+    ]
+  },
+  {
+    "day_index": 3,
+    "topic_slot": "Soft Robotics",
+    "title": "Tunable Friction and Strategy-Driven Design in Soft Grippers",
+    "is_revisit": false,
+    "markdown_content": "## Tunable Friction and Strategy-Driven Design in Soft Grippers\n\nSoft robotics has historically relied on the passive compliance of elastomers to handle delicate or irregularly shaped objects, but this often sacrifices payload capacity and precision. In [Grasp Strategy-Driven Design of Soft Robotic Grippers for Food Industry Applications](https://doi.org/10.1016/j.rineng.2026.110181), Matte & Kwok formalize a methodology for designing soft end-effectors based on specific kinematic grasping strategies rather than generic compliance. By mapping the mechanical properties of target food items to required **compliant mechanisms**, the authors demonstrate how tailored structural geometries can distribute stress evenly across delicate surfaces, preventing bruising or damage while maintaining sufficient grasp stability for high-speed pick-and-place operations.\n\nPushing the boundary between rigidity and softness, Ly introduces a novel hybrid approach in [Soft Rigid Hybrid Gripper with Inflatable Silicone Pockets for Tunable Frictional Grasping](https://doi.org/10.48550/arXiv.2603.07308). The design embeds an **inflatable silicone pocket** within a rigid structural shell. By modulating the internal pneumatic pressure, the gripper dynamically alters its effective **coefficient of friction** at the contact interface. This allows the system to remain structurally rigid enough to lift heavy payloads, while the pressurized soft interface conforms to micro-textures to securely grip slippery objects—a common failure mode for purely rigid or purely soft fingers.\n\n**Worth watching because:** Specialized environments require specialized adhesion. [Bioinspired magnetic soft gripper for rapid and non-injurious capture of deep-sea organisms](https://doi.org/10.20517/ss.2025.112) integrates **surface microneedle arrays** and magnetic actuation, enabling high-friction, rapid grasping underwater without puncturing or injuring fragile biological specimens.\n\n**Key takeaway:** Next-generation soft grippers are moving beyond pure passive compliance, integrating tunable friction and hybrid rigid-soft structures to handle everything from delicate food products to slippery, heavy payloads.",
+    "papers": [
+      {
+        "role": "lead",
+        "title": "Grasp Strategy-Driven Design of Soft Robotic Grippers for Food Industry Applications",
+        "url": "https://doi.org/10.1016/j.rineng.2026.110181",
+        "is_high_impact": false,
+        "cites_high_impact_id": null
+      },
+      {
+        "role": "supporting",
+        "title": "Soft Rigid Hybrid Gripper with Inflatable Silicone Pockets for Tunable Frictional Grasping",
+        "url": "https://doi.org/10.48550/arXiv.2603.07308",
+        "is_high_impact": false,
+        "cites_high_impact_id": null
+      },
+      {
+        "role": "horizon",
+        "title": "Bioinspired magnetic soft gripper for rapid and non-injurious capture of deep-sea organisms",
+        "url": "https://doi.org/10.20517/ss.2025.112",
+        "is_high_impact": false,
+        "cites_high_impact_id": null
+      }
+    ]
+  },
+  {
+    "day_index": 4,
+    "topic_slot": "Edge AI & SLAM",
+    "title": "Advancing SLAM: Semantic Filtering and Extraterrestrial Anchoring",
+    "is_revisit": false,
+    "markdown_content": "## Advancing SLAM: Semantic Filtering and Extraterrestrial Anchoring\n\nSimultaneous Localization and Mapping (SLAM) degrades rapidly when fundamental assumptions—such as scene rigidity or feature abundance—are violated. In [Semantic SLAM for Dynamic Environment](https://doi.org/10.1049/ell2.70565), Ye et al. tackle the rigidity problem by tightly coupling geometric data with deep learning-based semantic segmentation. Standard SLAM algorithms often fail when humans or vehicles move through the frame, as these dynamic features corrupt the odometry estimation. The proposed **Semantic SLAM** algorithm extracts semantic masks to identify potentially moving classes (e.g., pedestrians) and cross-references this with point cloud position data to rigorously filter out dynamic obstacles. This dual-verification approach significantly alleviates accuracy degradation in highly active environments without discarding static features that happen to belong to movable objects.\n\nOperating at the opposite extreme—where environments are completely static but dangerously feature-poor—Dai et al. present [Visual SLAM with DEM Anchoring for Long-Range Lunar Surface Navigation](https://navlab.stanford.edu/publications). Lunar rovers suffer from severe odometric drift over long traverses due to repetitive terrain and harsh lighting. The authors introduce a system that anchors visual SLAM updates to orbital **Digital Elevation Models (DEM)**. By continuously registering the local 3D reconstruction against the global DEM prior, the system bounds accumulated drift, enabling accurate, long-range autonomy on the lunar surface without relying on GPS.\n\n**Worth watching because:** The representation underlying spatial mapping is shifting. [Semantic Segmentation and Depth Estimation for Real-Time Surface Mapping Using Gaussian Splatting](https://navlab.stanford.edu/publications) brings **3D Gaussian splatting** into the real-time robotics domain, offering high-fidelity, semantically rich reconstructions that are computationally viable for aerospace edge hardware.\n\n**Key takeaway:** SLAM robustness is increasingly reliant on external priors—whether that means semantic masks to filter dynamic Earth environments or orbital elevation models to anchor lunar navigation.",
+    "papers": [
+      {
+        "role": "lead",
+        "title": "Semantic SLAM for Dynamic Environment",
+        "url": "https://doi.org/10.1049/ell2.70565",
+        "is_high_impact": false,
+        "cites_high_impact_id": null
+      },
+      {
+        "role": "supporting",
+        "title": "Visual SLAM with DEM Anchoring for Long-Range Lunar Surface Navigation",
+        "url": "https://navlab.stanford.edu/publications",
+        "is_high_impact": false,
+        "cites_high_impact_id": null
+      },
+      {
+        "role": "horizon",
+        "title": "Semantic Segmentation and Depth Estimation for Real-Time Surface Mapping Using Gaussian Splatting",
+        "url": "https://navlab.stanford.edu/publications",
+        "is_high_impact": false,
+        "cites_high_impact_id": null
+      }
+    ]
+  },
+  {
+    "day_index": 5,
+    "topic_slot": "Autonomous Field Robotics",
+    "title": "Scaling Agricultural Autonomy: From Swarm Control to Hierarchical Scene Graphs",
+    "is_revisit": false,
+    "markdown_content": "## Scaling Agricultural Autonomy: From Swarm Control to Hierarchical Scene Graphs\n\nThe physical scale and unstructured nature of agricultural environments are pushing the field away from monolithic machines toward distributed, intelligent systems. In [Swarm-Controlled Agricultural Robots: A Comprehensive Review of Architecture, Stability Strategies, and Field Implementation in Citrus Orchards](https://doi.org/10.53941/ic.2026.100002), Ma et al. analyze the transition to multi-robot orchestration. Single-robot systems struggle with the payload limits and battery constraints required for large-scale orchard management. The review details the architectural requirements for **swarm-controlled agricultural robots**, emphasizing decentralized stability strategies that allow fleets of smaller, agile units to coordinate tasks like harvesting and spraying in complex, GPS-denied canopies.\n\nTo make these robotic fleets usable by actual farm operators, the interface must evolve beyond rigid waypoints. In [Osiris++: hierarchical representations for robotic-enabled precision agriculture](https://doi.org/10.3389/frobt.2026.1732004), Mukuddem et al. introduce a **hierarchical scene graph** approach that maps the agricultural environment into semantically meaningful layers (e.g., farm -> field -> row -> plant). This structured representation bridges the gap between raw sensor data and natural language processing. Osiris++ allows operators to issue high-level, natural language instructions (e.g., \"inspect the third row of the north field\"), which the system automatically grounds to specific spatial coordinates and robotic actions, drastically lowering the barrier to adoption.\n\n**Worth watching because:** As hardware matures, the software bottlenecks become clearer. [Artificial Intelligence in Agri-Robotics: A Systematic Review of Trends and Emerging Directions...](https://doi.org/10.3390/robotics15010024) synthesizes 25 years of research, pointing out that while UAV sensing is saturated, critical gaps remain in adaptive autonomy and soft manipulation for delicate crop handling.\n\n**Key takeaway:** Agricultural robotics is transitioning from single-agent automation to coordinated multi-robot swarms that can be directed intuitively via natural language and hierarchical scene representations.",
+    "papers": [
+      {
+        "role": "lead",
+        "title": "Swarm-Controlled Agricultural Robots: A Comprehensive Review of Architecture, Stability Strategies, and Field Implementation in Citrus Orchards",
+        "url": "https://doi.org/10.53941/ic.2026.100002",
+        "is_high_impact": false,
+        "cites_high_impact_id": null
+      },
+      {
+        "role": "supporting",
+        "title": "Osiris++: hierarchical representations for robotic-enabled precision agriculture",
+        "url": "https://doi.org/10.3389/frobt.2026.1732004",
+        "is_high_impact": false,
+        "cites_high_impact_id": null
+      },
+      {
+        "role": "horizon",
+        "title": "Artificial Intelligence in Agri-Robotics: A Systematic Review of Trends and Emerging Directions Leveraging Bibliometric Tools",
+        "url": "https://doi.org/10.3390/robotics15010024",
+        "is_high_impact": false,
+        "cites_high_impact_id": null
+      }
+    ]
+  },
+  {
+    "day_index": 6,
+    "topic_slot": "Control Systems",
+    "title": "Accelerating LLM Agents and Ensemble Imitation in Control Systems",
+    "is_revisit": false,
+    "markdown_content": "## Accelerating LLM Agents and Ensemble Imitation in Control Systems\n\nIntegrating Large Language Models (LLMs) into closed-loop control systems introduces a severe latency bottleneck: the strictly serial nature of the LLM-tool execution loop. In [Act While Thinking: Accelerating LLM Agents via Pattern-Aware Speculative Tool Execution](https://arxiv.org/abs/2603.18897), Sui proposes PASTE, a framework designed to hide this latency. Traditional agentic workflows force the system to halt while an external tool (like a physics simulator or a vision API) processes a request. PASTE utilizes **Pattern-Aware Speculative Tool Execution**, predicting the likely required tool calls based on historical trajectories and executing them asynchronously while the LLM continues its reasoning process. If the speculation is correct, the tool output is immediately available when the LLM requests it, drastically reducing the wall-clock time required for complex, multi-step autonomous tasks.\n\nIn domains where the environment's reaction is highly complex, training robust policies requires sophisticated simulation. Zhang & Yu tackle this in [An Interactive Simulation Framework by Ensemble Imitation Learning Agents for Training Robust Trading Policies](https://doi.org/10.1609/aaai.v40i47.41493). While focused on market dynamics, the methodology is highly relevant to physical control: they utilize **ensemble imitation learning** to train a suite of agents that collectively mimic complex environmental reactions. By synthesizing the actions of this ensemble, the framework generates a highly responsive, endogenously driven simulator. This prevents the primary control policy from exploiting static simulator flaws, forcing it to learn robust, generalized behaviors.\n\n**Worth watching because:** Bridging theory and practice remains difficult. [From Simulation to Reality: A learning methodology for Understanding Control Systems and Robotic Arms with the ARCHIE Robot](https://doi.org/10.3389/feduc.2026.1808715) provides an open-source framework using the ARCHIE robot to teach **Sim2Real** methodologies, lowering the barrier for experimenting with advanced control theory.\n\n**Key takeaway:** Overcoming the latency of LLM-driven control requires speculative execution architectures, while robust policy training increasingly relies on ensemble-based imitation learning to model complex environmental reactions.",
+    "papers": [
+      {
+        "role": "lead",
+        "title": "Act While Thinking: Accelerating LLM Agents via Pattern-Aware Speculative Tool Execution",
+        "url": "https://arxiv.org/abs/2603.18897",
+        "is_high_impact": false,
+        "cites_high_impact_id": null
+      },
+      {
+        "role": "supporting",
+        "title": "An Interactive Simulation Framework by Ensemble Imitation Learning Agents for Training Robust Trading Policies",
+        "url": "https://doi.org/10.1609/aaai.v40i47.41493",
+        "is_high_impact": false,
+        "cites_high_impact_id": null
+      },
+      {
+        "role": "horizon",
+        "title": "From Simulation to Reality: A learning methodology for Understanding Control Systems and Robotic Arms with the ARCHIE Robot",
+        "url": "https://doi.org/10.3389/feduc.2026.1808715",
+        "is_high_impact": false,
+        "cites_high_impact_id": null
+      }
+    ]
+  },
+  {
+    "day_index": 7,
+    "topic_slot": "PINNs & Neural Control",
+    "title": "Differentiable Simulation and Verifiable PINNs for Neural Control",
+    "is_revisit": false,
+    "markdown_content": "## Differentiable Simulation and Verifiable PINNs for Neural Control\n\nNeural control policies often fail when deployed because real-world physical parameters drift from their simulated counterparts. In [Learning on the Fly: Rapid Policy Adaptation via Differentiable Simulation](https://arxiv.org/abs/2508.21065), Pan et al. introduce an online adaptive framework that closes this gap in real time. The system unifies **residual dynamics learning** with policy adaptation by embedding the control loop inside a **differentiable simulation**. When the robot encounters an unseen disturbance, the framework calculates the gradient of the error with respect to the dynamics parameters and backpropagates it entirely through the physics engine. This allows the neural control policy to update and stabilize against novel physical disturbances within seconds, achieving a sample efficiency impossible with standard reinforcement learning.\n\nWhile rapid adaptation is crucial, safety-critical systems require mathematical guarantees. In [Verifiable Error Bounds for Physics-Informed Neural Network Solutions of Lyapunov and Hamilton-Jacobi-Bellman Equations](https://arxiv.org/abs/2603.19545), Liu bridges the gap between deep learning and rigorous control theory. The paper establishes verifiable error bounds for **Physics-Informed Neural Networks (PINNs)** used to approximate solutions to **Hamilton-Jacobi-Bellman (HJB)** equations. By proving that a verifiable residual bound translates to a relative error bound against the true optimal solution, this work provides the strict mathematical guarantees necessary to deploy PINN-derived control policies in safety-critical environments.\n\n**Worth watching because:** Differentiable simulation is also transforming hardware design. [Accelerated co-design of robots through morphological pretraining](https://openreview.net/forum?id=20866) utilizes gradient-based optimization through differentiable physics to pretrain a morphology-agnostic controller, preventing diversity collapse and drastically speeding up the co-evolution of a robot's physical layout and its neural brain.\n\n**Key takeaway:** Neural control systems are achieving real-world viability through the dual engines of differentiable simulation for rapid, sample-efficient adaptation and verifiable error bounds for safety guarantees.",
+    "papers": [
+      {
+        "role": "lead",
+        "title": "Learning on the Fly: Rapid Policy Adaptation via Differentiable Simulation",
+        "url": "https://arxiv.org/abs/2508.21065",
+        "is_high_impact": false,
+        "cites_high_impact_id": null
+      },
+      {
+        "role": "supporting",
+        "title": "Verifiable Error Bounds for Physics-Informed Neural Network Solutions of Lyapunov and Hamilton-Jacobi-Bellman Equations",
+        "url": "https://arxiv.org/abs/2603.19545",
+        "is_high_impact": false,
+        "cites_high_impact_id": null
+      },
+      {
+        "role": "horizon",
+        "title": "Accelerated co-design of robots through morphological pretraining",
+        "url": "https://openreview.net/forum?id=20866",
+        "is_high_impact": false,
+        "cites_high_impact_id": null
+      }
+    ]
+  }
+]
