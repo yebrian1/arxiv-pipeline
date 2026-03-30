@@ -1,35 +1,5 @@
 [
   {
-    "day_index": 3,
-    "topic_slot": "Soft Robotics",
-    "title": "Tunable Friction and Strategy-Driven Design in Soft Grippers",
-    "is_revisit": false,
-    "markdown_content": "## Tunable Friction and Strategy-Driven Design in Soft Grippers\n\nSoft robotics has historically relied on the passive compliance of elastomers to handle delicate or irregularly shaped objects, but this often sacrifices payload capacity and precision. In [Grasp Strategy-Driven Design of Soft Robotic Grippers for Food Industry Applications](https://doi.org/10.1016/j.rineng.2026.110181), Matte & Kwok formalize a methodology for designing soft end-effectors based on specific kinematic grasping strategies rather than generic compliance. By mapping the mechanical properties of target food items to required **compliant mechanisms**, the authors demonstrate how tailored structural geometries can distribute stress evenly across delicate surfaces, preventing bruising or damage while maintaining sufficient grasp stability for high-speed pick-and-place operations.\n\nPushing the boundary between rigidity and softness, Ly introduces a novel hybrid approach in [Soft Rigid Hybrid Gripper with Inflatable Silicone Pockets for Tunable Frictional Grasping](https://doi.org/10.48550/arXiv.2603.07308). The design embeds an **inflatable silicone pocket** within a rigid structural shell. By modulating the internal pneumatic pressure, the gripper dynamically alters its effective **coefficient of friction** at the contact interface. This allows the system to remain structurally rigid enough to lift heavy payloads, while the pressurized soft interface conforms to micro-textures to securely grip slippery objects—a common failure mode for purely rigid or purely soft fingers.\n\n**Worth watching because:** Specialized environments require specialized adhesion. [Bioinspired magnetic soft gripper for rapid and non-injurious capture of deep-sea organisms](https://doi.org/10.20517/ss.2025.112) integrates **surface microneedle arrays** and magnetic actuation, enabling high-friction, rapid grasping underwater without puncturing or injuring fragile biological specimens.\n\n**Key takeaway:** Next-generation soft grippers are moving beyond pure passive compliance, integrating tunable friction and hybrid rigid-soft structures to handle everything from delicate food products to slippery, heavy payloads.",
-    "papers": [
-      {
-        "role": "lead",
-        "title": "Grasp Strategy-Driven Design of Soft Robotic Grippers for Food Industry Applications",
-        "url": "https://doi.org/10.1016/j.rineng.2026.110181",
-        "is_high_impact": false,
-        "cites_high_impact_id": null
-      },
-      {
-        "role": "supporting",
-        "title": "Soft Rigid Hybrid Gripper with Inflatable Silicone Pockets for Tunable Frictional Grasping",
-        "url": "https://doi.org/10.48550/arXiv.2603.07308",
-        "is_high_impact": false,
-        "cites_high_impact_id": null
-      },
-      {
-        "role": "horizon",
-        "title": "Bioinspired magnetic soft gripper for rapid and non-injurious capture of deep-sea organisms",
-        "url": "https://doi.org/10.20517/ss.2025.112",
-        "is_high_impact": false,
-        "cites_high_impact_id": null
-      }
-    ]
-  },
-  {
     "day_index": 4,
     "topic_slot": "Edge AI & SLAM",
     "title": "Advancing SLAM: Semantic Filtering and Extraterrestrial Anchoring",
