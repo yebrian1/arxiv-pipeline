@@ -1,0 +1,5 @@
+.secrets
+scripts/_fetch_results.json
+logs/
+__pycache__/
+*.pyc

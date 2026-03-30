@@ -1,0 +1,20 @@
+{
+  "ranking_weights": {
+    "relevance": 0.40,
+    "impact_score": 0.30,
+    "citation_velocity": 0.20,
+    "recency": 0.10
+  },
+  "tier2_promotion_threshold": 0.30,
+  "horizon_paper_score_gate": 0.50,
+  "revisit_thresholds": {
+    "new_citations_delta": 10,
+    "citing_papers_in_batch": 2
+  },
+  "revisit_impact_bump": 0.15,
+  "revisit_frequency_cap_days": 28,
+  "llm_candidates_per_slot": 5,
+  "tier1_rolling_window_days": 180,
+  "arxiv_lookback_days": 30,
+  "gemini_model": "gemini-3.1-pro-preview"
+}
